@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Asset/css/main.css">
+    <link rel="stylesheet" href="Asset/css/feedback.css">
+    <title>Feedback</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+          <div class="logo">
+            <img src="Asset/images/greenlk.webp" alt="GreenLK Logo">
+          </div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="problems.html">Problems</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </div>
+      </nav>
+
+      <div id="app" class="feedback">
+        <h1>Feedback Form</h1>
+        <form @submit.prevent="submitFeedback">
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" v-model="feedback.name" required>
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" v-model="feedback.email" required>
+          </div>
+          <div>
+            <label for="message">Message:</label>
+            <textarea id="message" v-model="feedback.message" required></textarea>
+          </div>
+          <div>
+            <button type="submit">Submit</button>
+          </div>
+          
+        </form>
+      </div>
+
+      <footer>
+        <div class="footer_content">
+          <div class="about">
+            <h3>About GreenLK</h3>
+            <p>GreenLK is dedicated to promoting environmental awareness and fostering sustainable practices for a greener future.</p>
+          </div>
+          <div class="contact">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>Email: info@greenlk.com</li>
+              <li>Phone: 011 2 350 350</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <div class="copyright">
+        <p>&copy; 2024 Shavindu Gayashan. All rights reserved.</p>
+      </div>
+      
+</body>
+</html>

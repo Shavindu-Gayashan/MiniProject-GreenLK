@@ -1,0 +1,21 @@
+.about_greenlk h1,.about_me h1,.contact h1{
+    background: linear-gradient(to right, #31ddaf, #09664f);
+    color: #fff;
+    padding: 20px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.about_text{
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about_greenlk p{
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.about h1{
+    cursor: url('../images/cursor_round_2.svg'),auto ;
+}

@@ -1,0 +1,79 @@
+.gallery {
+    text-align: center;
+}
+
+.gallery h1 {
+    background: linear-gradient(to right, #31ddaf, #09664f);
+    color: #fff;
+    padding: 20px;
+    font-size: 36px;
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image {
+    margin: 15px;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+}
+
+.image img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.image:hover {
+    transform: scale(1.5);
+    cursor: url('../images/cursor_round_3.svg'),auto ;
+}
+
+
+/* Add image*/
+
+.add-image {
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    background-color: #dddddd;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.add-image input[type="file"] {
+    display: block;
+    /* Hide the default file input */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+}
+
+.add-image button {
+    background-color: #31ddaf;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 1s;
+}
+
+.add-image button:hover {
+    background-color: #09664f;
+}
+
+.add-image .textbox {
+    padding: 5px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.gallery h2 {
+    color: #09664f;
+}
