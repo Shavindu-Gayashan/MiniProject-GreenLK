@@ -52,16 +52,17 @@ textarea {
 button {
     padding: 10px 20px ;
     font-size: 16px;
-    background-color: #31ddaf;
+    background-color: #09664f;
     color: #fff;
     border: none;
     border-radius: 4px;
     margin-bottom: 20px;
     cursor: url('../images/cursor_round_2.svg'),auto ;
+    transition: 0.5s;
 }
 
-button[type="submit"]:hover {
-    background-color: #09664f;
+button:hover {
+    background-color: #31ddaf;
 }
 
 .feedback_display .comment-item{
@@ -95,6 +96,8 @@ button[type="submit"]:hover {
 
 .feedback_display .comment .name{
     width: 20%;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 .feedback_display .comment .message{
