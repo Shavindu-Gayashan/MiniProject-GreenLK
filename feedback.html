@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Asset/css/main.css">
     <link rel="stylesheet" href="Asset/css/feedback.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <title>Feedback</title>
 </head>
 <body>
@@ -23,27 +24,93 @@
         </div>
       </nav>
 
-      <div id="app" class="feedback">
-        <h1>Feedback Form</h1>
-        <form @submit.prevent="submitFeedback">
-          <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" v-model="feedback.name" required>
-          </div>
-          <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" v-model="feedback.email" required>
-          </div>
-          <div>
-            <label for="message">Message:</label>
-            <textarea id="message" v-model="feedback.message" required></textarea>
-          </div>
-          <div>
-            <button type="submit">Submit</button>
-          </div>
-          
-        </form>
+      <div id="app">
+        <!-- Comment Form Component -->
+        <comment-form @add-comment="addComment"></comment-form>
+    
+        <!-- Display Comments Component -->
+        <display-comments :comments="comments"></display-comments>
       </div>
+    
+      <script>
+        // Comment form component
+        Vue.component('comment-form', {
+          data() {
+            return {
+              name: '',
+              email: '',
+              message: ''
+            };
+          },
+          methods: {
+            submitComment() {
+              if (this.name.trim() !== '' && this.email.trim() !== '' && this.message.trim() !== '') {
+                const comment = {
+                  name: this.name,
+                  email: this.email,
+                  message: this.message
+                };
+                this.$emit('add-comment', comment);
+                this.name = '';
+                this.email = '';
+                this.message = '';
+              }
+            }
+          },
+          template: `
+                <div class="feedback"> 
+                  <h1>Feedback Form</h1>
+                  <div class="form_content">
+                    <div>
+                      <label for="name">Name :</label>
+                      <input v-model="name" type="text" placeholder="Enter Your Name">
+                    </div>
+                    <div>
+                      <label for="email">Email :</label>
+                      <input v-model="email" type="email" placeholder="Enter Your Email">
+                    </div>
+                    <div class = "testarea">
+                      <label for="message">Message :</label>
+                      <textarea v-model="message" placeholder="Enter Your Message"></textarea>
+                    </div>
+                    <div>
+                      <button @click="submitComment">Submit</button>
+                    </div>
+                    </div>
+                </div>
+            `
+        });
+    
+        // Display comments component
+        Vue.component('display-comments', {
+          props: ['comments'],
+          template: `
+                <div class="display-comments-container">
+                    <h2>Comments:</h2>
+                    <div v-for="(comment, index) in comments" :key="index" class="comment-item">
+                        <div><strong>Name:</strong> {{ comment.name }}</div>
+                        <div><strong>Message:</strong> {{ comment.message }}</div>
+                    </div>
+                </div>
+    
+                
+            `
+    
+    
+        });
+    
+        new Vue({
+          el: '#app',
+          data: {
+            comments: []
+          },
+          methods: {
+            addComment(comment) {
+              this.comments.unshift(comment);
+            }
+          }
+        });
+      </script>
 
       <footer>
         <div class="footer_content">

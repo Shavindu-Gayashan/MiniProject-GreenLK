@@ -1,0 +1,14 @@
+.problems .content_block {
+    max-width: 1250px;
+    margin-left: auto;
+    margin-Right: auto;
+
+}
+
+.problems .content_block h1{
+    background: linear-gradient(to right, #31ddaf, #09664f);
+    color: #fff;
+    padding: 20px;
+    font-size: 36px;
+    text-align: center;
+}
