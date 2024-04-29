@@ -34,6 +34,17 @@
     <display-comments :comments="comments"></display-comments>
   </div>
 
+  <!-- Dummy Comment -->
+  <div class="feedback_display">
+    <div v-for="(comment, index) in comments" :key="index" class="comment-item">
+      <div class="comment">
+        <div class="profile_picture"><img src="Asset/images/profile picture dark.jpg"></div>
+        <div class="name">A.M.S.G Athapaththu</div>
+        <div class="message">"Wow, stumbled upon GreenLK and I'm impressed! It's time to take action and make a difference. Can't wait to explore more and learn how I can contribute to a greener planet! 🌍💚 #GreenLK #Sustainability"</div>
+      </div>
+    </div>
+  </div>
+
   <script>
     // Comment form component
     Vue.component('comment-form', {

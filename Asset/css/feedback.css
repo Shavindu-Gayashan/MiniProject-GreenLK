@@ -92,16 +92,20 @@ button:hover {
 
 .profile_picture img{
     border-radius: 10px;
+    width: 80px;
 }
 
 .feedback_display .comment .name{
     width: 20%;
     font-weight: bold;
-    margin-top: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .feedback_display .comment .message{
     width: 70%;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 
