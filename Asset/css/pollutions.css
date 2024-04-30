@@ -7,20 +7,37 @@
 }
 
 .content_block p {
-    width: 1250px;
+    width: 60%;
     margin-left: auto;
     margin-Right: auto;
+    font-size: 20px;
+    line-height:40px;
+    text-align: justify;
+    
 
 }
 
-.content{
+.content {
     display: flex;
     justify-content: space-between;
     width: 1250px;
     margin-left: auto;
     margin-Right: auto;
 }
+.content .space{
+    width: 5%;
+}
+.content .introduction{
+    width: 1250px;
+}
 
 .content_block .sub_title{
     padding: 5px;
+}
+
+.content_block img{
+    height: auto;
+    width: 35%;
+    border-radius: 10px;
+    margin-top: 10px;
 }
