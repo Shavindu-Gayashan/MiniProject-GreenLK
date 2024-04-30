@@ -1,11 +1,10 @@
 html{
   cursor: url('../images/cursor_round_1.svg'), auto ;
 }
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  
-  
 }
 
 nav {
@@ -64,6 +63,7 @@ footer {
   background: linear-gradient(to right, #31ddaf, #09664f);
   color: #fff;
   padding: 25px ;
+  margin-top: 40px;
 }
 
 footer .footer_content {
@@ -78,7 +78,7 @@ footer h3 {
 }
 
 footer p, footer ul {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 footer ul {

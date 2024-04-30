@@ -1,0 +1,46 @@
+.content_block  h1{
+    background: linear-gradient(to right, #31ddaf, #09664f);
+    color: #fff;
+    padding: 20px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.content_block ul ,.solution{
+    width: 60%;
+    margin-left: auto;
+    margin-Right: auto;
+    font-size: 20px;
+    line-height:40px;
+    text-align: left;
+
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 1250px;
+    margin-left: auto;
+    margin-Right: auto;
+}
+.content .space{
+    width: 5%;
+}
+.content .introduction{
+    width: 1250px;
+    font-size: 20px;
+    line-height:40px;
+    text-align: justify;
+
+}
+
+.content_block .sub_title{
+    padding: 5px;
+}
+
+.content_block img{
+    height: auto;
+    width: 35%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
