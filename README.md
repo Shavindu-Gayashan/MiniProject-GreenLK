@@ -1,2 +1,2 @@
 # GreenLK
- GreenLK is a website I created for my university Mini Project
+ GreenLK is a website I created for my university Mini Project (OUSL)
